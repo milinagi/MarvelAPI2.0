@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_padding_default">16dp</dimen>
+    <dimen name="list_item_img_size">96dp</dimen>
+    <dimen name="list_item_img_stroke">1dp</dimen>
+</resources>
