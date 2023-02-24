@@ -91,21 +91,5 @@ fun BodyContent(navController: NavController) {
                 )){
             Text(text = "Series", color = Color.Black, fontSize = 30.sp)
         }
-
-
-
-
-//        Button(onClick = {
-//            navController.navigate(route = AppScreens.ComicsScreen.route)
-//        }) {
-//            Text(text = "Comics")
-//        }
-//
-//
-//        Button(onClick = {
-//            navController.navigate(route = AppScreens.SeriesScreen.route)
-//        }) {
-//            Text(text = "Series")
-//        }
     }
 }

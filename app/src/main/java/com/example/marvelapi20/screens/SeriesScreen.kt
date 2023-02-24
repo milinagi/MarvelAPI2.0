@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.cursosandroidant.filmsjcref.dataAccess.FakeDatabase
 import com.example.marvelapi20.components.ListAdvance
+import com.example.marvelapi20.model.MarvelDatabase
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
@@ -35,5 +35,5 @@ fun SeriesScreen(navController: NavController) {
 
 @Composable
 fun FourthBodyContent() {
-    ListAdvance(FakeDatabase.getAllFilms())
+    ListAdvance(MarvelDatabase.getAllHeroes())
 }

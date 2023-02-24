@@ -22,17 +22,17 @@ import androidx.compose.ui.text.style.TextOverflow
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.example.marvelapi20.R
-import com.example.marvelapi20.model.Film
+import com.example.marvelapi20.model.SuperHero
 
 @Composable
-fun ListAdvance(films: List<Film>) {
+fun ListAdvance(heroes: List<SuperHero>) {
     val context = LocalContext.current
     LazyVerticalGrid(columns = GridCells.Fixed(2),
         content = {
-            items(films.size) {
-                val film = films[it]
-                ItemListAdvance(film = film, modifier = Modifier.clickable {
-                    Toast.makeText(context, films[it].name, Toast.LENGTH_SHORT).show()
+            items(heroes.size) {
+                val film = heroes[it]
+                ItemListAdvance(hero = film, modifier = Modifier.clickable {
+                    Toast.makeText(context, heroes[it].name, Toast.LENGTH_SHORT).show()
                 })
             }
         })
@@ -41,18 +41,18 @@ fun ListAdvance(films: List<Film>) {
 
 @OptIn(ExperimentalMaterialApi::class, ExperimentalGlideComposeApi::class)
 @Composable
-fun ItemListAdvance(film: Film, modifier: Modifier) {
+fun ItemListAdvance(hero: SuperHero, modifier: Modifier) {
     Column(modifier = modifier) {
         ListItem(
-            text = { Text(text = film.name,
+            text = { Text(text = hero.name,
                 style = MaterialTheme.typography.h6,
                 maxLines = 2, overflow = TextOverflow.Ellipsis) },
-            secondaryText = { Text(text = film.description,
+            secondaryText = { Text(text = hero.description,
                 style = MaterialTheme.typography.subtitle2,
                 maxLines = 3, overflow = TextOverflow.Ellipsis) },
             singleLineSecondaryText = false,
             icon = {
-                GlideImage(model = film.photoUrl, contentDescription = "Cover film",
+                GlideImage(model = hero.photoUrl, contentDescription = "Cover film",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
                         .size(dimensionResource(id = R.dimen.list_item_img_size))

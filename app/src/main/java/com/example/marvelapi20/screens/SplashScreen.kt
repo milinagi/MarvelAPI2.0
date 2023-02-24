@@ -12,7 +12,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.example.marvelapi20.R
 import com.example.marvelapi20.navigation.AppScreens
@@ -23,7 +22,7 @@ import kotlinx.coroutines.delay
 fun SplashScreen(navController: NavHostController) {
     
     LaunchedEffect(key1 = true) {
-        delay(1000)
+        delay(3000)
         navController.popBackStack()
         navController.navigate(AppScreens.MainScreen.route)
     }

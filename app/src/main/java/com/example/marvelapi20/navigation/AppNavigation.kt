@@ -7,8 +7,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.marvelapi20.screens.*
 
-
-
 @Preview
 @Composable
 fun AppNavigation() {
@@ -32,6 +30,5 @@ fun AppNavigation() {
         composable(route = AppScreens.SeriesScreen.route) {
             SeriesScreen(navController = navController)
         }
-
     }
 }
